@@ -64,7 +64,7 @@ int main() {
                     if (i < strlen(infixExpression) - 1 &&
                         ((infixExpression[i] == '>' && infixExpression[i+1] == '=') || (infixExpression[i] == '<' 
                         && infixExpression[i+1] == '=') || (infixExpression[i] == '!' && infixExpression[i+1] == '=')||
-                        (infixExpression[i] == '=' && infixExpression[i+1] == '=') || infixExpression[i] == '|' || infixExpression[i] == '&')) {
+                        (infixExpression[i] == '=' && infixExpression[i+1] == '=') || (infixExpression[i] == '|' && infixExpression[i+1] == '|') || (infixExpression[i] == '&' && infixExpression[i+1] == '&'))) {
                         char op[3] = {infixExpression[i], infixExpression[i + 1], '\0'};
                         enqueue(op, &infixQueue);
                         i++; // Skip the second character
